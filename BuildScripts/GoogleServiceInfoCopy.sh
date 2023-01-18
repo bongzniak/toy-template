@@ -1,0 +1,1 @@
+cp -r "${PROJECT_DIR}/Supporting Files/Firebase/Release/GoogleService-Info-Release.plist" "${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist"

@@ -9,25 +9,19 @@ import UIKit
 
 class BaseNavigationController: UINavigationController {
     
-    lazy private(set) var className: String = {
-        return type(of: self).description().components(separatedBy: ".").last ?? ""
-    }()
+    // MARK: Properties
     
-    // MARK: - Properties
+    // MARK: Initialize
     
-    // MARK: - Initialize
-    
-    // MARK: Rx
-    
-    // MARK: - Life Cycle
+    // MARK: Life Cycle
     
     override func viewDidLoad() { 
         super.viewDidLoad()
-        self.navigationBar.prefersLargeTitles = true
+        self.navigationBar.prefersLargeTitles = false
     }
     
     deinit {
-        logger.verbose("DEINIT: \(self.className)")
+        logger.verbose("DEINIT: \(String(describing: type(of: self)))")
     }
     
     // MARK: - Layout Constraints

@@ -1,0 +1,22 @@
+ input_dir: ${PROJECT_DIR}/Resources/
+ output_dir: ${PROJECT_DIR}/Resources/Generated/
+
+ strings:
+   inputs:
+     - ko.lproj
+   outputs:
+     - templateName: structured-swift5
+       params: 
+        enumName: Localized
+       output: Localized+Generated.swift
+
+ xcassets:
+   inputs:
+     - Assets.xcassets
+     - Colors.xcassets
+     - Fonts
+   outputs:
+     - templateName: swift5
+       params:
+         forceProvidesNamespaces: true
+       output: XCAssets+Generated.swift
